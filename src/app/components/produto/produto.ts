@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-produto',
-  imports: [],
+  imports: [UpperCasePipe],
   templateUrl: './produto.html',
   styleUrl: './produto.css',
 })
-export class Produto {}
+//adiciona variavel "produto" com as condicionais adequadas 
+export class Produto {
+  produto = 'Notebook Gamer';
+  preco = 5000;
+   mostrarProduto = true;
+   mostrarPreco = true;
+  produtos = [
+    {nome: 'Teclado', preco: 49.99},
+    {nome: 'Mouse', preco: 36.70},
+    {nome: 'Monitor', preco: 980.00}
+  ];
+}
