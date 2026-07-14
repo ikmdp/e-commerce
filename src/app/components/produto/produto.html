@@ -1,1 +1,8 @@
-<p>produto works!</p>
+<div>
+    @for(item of produtos;track item){
+        <div>
+          <h3>{{item.nome | uppercase }}</h3>
+          <p>{{item.preco}}</p>
+        </div>
+    }  
+</div>
