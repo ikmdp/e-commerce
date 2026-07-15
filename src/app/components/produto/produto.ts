@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { UpperCasePipe } from '@angular/common';
-
+import { UpperCasePipe, CurrencyPipe } from '@angular/common';
+import {PrecoFormatadoPipe} from '../../pipes/preco-formatado-pipe';
 @Component({
   selector: 'app-produto',
-  imports: [UpperCasePipe],
+  imports: [UpperCasePipe, PrecoFormatadoPipe],
   templateUrl: './produto.html',
   styleUrl: './produto.css',
 })
@@ -14,8 +14,8 @@ export class Produto {
    mostrarProduto = true;
    mostrarPreco = true;
   produtos = [
-    {nome: 'Teclado', preco: 49.99},
-    {nome: 'Mouse', preco: 36.70},
+    {nome: 'Teclado', preco: 490.99},
+    {nome: 'Mouse', preco: 360.70},
     {nome: 'Monitor', preco: 980.00}
   ];
 }
